@@ -1,0 +1,19 @@
+<h1>Register</h1>
+<% if (errors) { %>
+  <ul>
+    <% errors.forEach(function(e, index) { %>
+      <li style="color: red;"><%= e.msg %></li>
+    <% }); %>
+  </ul>
+<% } %>
+<form caction="/users/register" method="post">
+  <label for="username">username</label><br />
+  <input type="text" name="username" value=""><br /><br />
+  <label for="email">email</label><br />
+  <input type="email" name="email" value=""><br /><br />
+  <label for="password">password</label><br />
+  <input type="password" name="password" value=""><br /><br />
+  <label for="password2">password</label><br />
+  <input type="password" name="password2" value=""><br /><br />
+  <input type="submit" name="" value="register">
+</form>
